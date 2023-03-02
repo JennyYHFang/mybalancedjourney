@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <div>Dailylog Weight: </div>
+  <div><%= dailylogs.weight %></div>
+  <div>Dailylog exercise: </div>
+  <div><%= dailylogs.exercise %></div>
+  <div>Dailylog date: </div>
+  <div><%= dailylogs.date %></div>
+   <!-- start cast list
+  <div>Cast:</div>
+  <ul>
+    <%- .cast.map(p =>
+      `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
+    ).join('') %>
+  </ul>
+  <!-- end cast list -->
+</section>
+<!-- add to cast form below this comment -->
+<form id="add-per-to-cast" action="/dailylog/<%= dailylog._id %>/meals" method="POST">
+  <select name="mealId">
+    <!-- Emit an option for each meal -->
+    <%- meals.map(p => 
+      `<option value="${p._id}">${p.name}</option>`
+    ).join('') %>
+  </select>
+  <button type="submit">Add to Food</button>
+</form>
+
+
+
+
+  
+<%- include('../partials/footer') %> -->
