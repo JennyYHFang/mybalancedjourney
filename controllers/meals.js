@@ -10,10 +10,9 @@ module.exports = {
 };
 
 function addToFood(req, res) {
-
+  console.log("test")
   dailylog.findById(req.params.id, function(err, dailylog) {
-
-
+    console.log(dailylog, req.body.mealId)
     dailylog.food.push(req.body.mealId);
     dailylog.save(function(err) {
       res.redirect(`/dailylogs/${dailylog._id}`);
@@ -52,7 +51,7 @@ function newMeal(req, res) {
 
 function deleteMeal(req, res) {
   Meal.findByIdAndRemove({ _id: req.params.id }, req.body).then(function(){
-    res.redirect('/meals')
+    res.redirect('/meals/new')
   });
 }
 

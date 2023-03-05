@@ -11,8 +11,11 @@ router.post('/', mealsCtrl.create);
 // POST /dailylogs/:id/meals (assoc dailylog & meal)
 router.post('/dailylogs/:id/meals', mealsCtrl.addToFood);
 
-router.delete('/:id', mealsCtrl.delete);
 
-// router.put('/:id', mealsCtrl.update);
+
+// Delete meal
+router.delete('/:id', mealsCtrl.delete);
+// Update meal
+router.put('/:id', mealsCtrl.update);
 
 module.exports = router;

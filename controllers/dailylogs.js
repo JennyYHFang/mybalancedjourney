@@ -13,6 +13,7 @@ module.exports = {
 function index(req, res) {
   Dailylog.find({}, function(err, dailylogs) {
     res.render('dailylogs/index', { title: 'All Daily Logs', dailylogs });
+    
   });
 }
 
@@ -29,7 +30,7 @@ function show(req, res) {
       Meal.find(
         {_id: {$nin: dailylog.food}},
         function(err, meals) {
-          console.log(dailylogs);
+          console.log(dailylog);
           res.render('dailylogs/show', {
             title: 'Daily Log',
             dailylog,
