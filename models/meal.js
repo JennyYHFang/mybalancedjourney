@@ -13,20 +13,13 @@ const mealSchema = new Schema ({
     water: {
         type: Number,
         default:0,
+    },
+    dailylogid: {
+        type: String,
     }
     },
     {
         timestamps: true
 });
-
-// const mealSchema = new Schema({
-//     name: {
-//       type: String,
-//       required: true,
-//       unique: true
-//     },
-//   }, {
-//     timestamps: true
-//   });
 
 module.exports = mongoose.model('Meal', mealSchema);

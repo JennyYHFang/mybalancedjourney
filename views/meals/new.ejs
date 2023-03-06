@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<div>Before adding, please ensure that the Performer is not in the following list:</div>
+<div>Input the type of meals, food, and water intake:</div>
 <section id="badge-container">
   <% meals.forEach(function(m) { %>
     <article class="badge"><%= m.name %> <%= m.food %> <%= m.water %> cups
@@ -12,13 +12,6 @@
   <% }) %>
 </section>
 
-<!-- <form id="add-meal-form" action="/meals" method="POST">
-  <label>Name:</label>
-  <input type="text" name="name">
-  <label>Born:</label>
-  <input type="date" name="born">
-  <input type="submit" value="Add Meal">
-</form> -->
 
 <form id="add-meal-form" action="/meals" method="POST">
     <label>Name:</label>

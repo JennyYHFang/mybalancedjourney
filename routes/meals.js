@@ -8,11 +8,6 @@ const mealsCtrl = require('../controllers/meals');
 router.get('/new', mealsCtrl.new);
 // POST /meals
 router.post('/', mealsCtrl.create);
-// POST /dailylogs/:id/meals (assoc dailylog & meal)
-router.post('/dailylogs/:id/meals', mealsCtrl.addToFood);
-
-
-
 // Delete meal
 router.delete('/:id', mealsCtrl.delete);
 // Update meal

@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/dailylogs/<%= dailylog._id %>?_method=PUT" method="POST">
+    <label>date:</label>
+  <input type="date" name="date" value="<%= dailylog.date %>">
+    <label>Nickname:</label>
+    <input type="text" name="name" value="<%= dailylog.name %>">
+  <label>Weight:</label>
+  <input type="text" name="weight" value="<%= dailylog.weight %>">
+  <label>exercise:</label>
+  <input type="text" name="exercise" value="<%= dailylog.exercise %>">
+  <input type="submit" value="Update Daily Log">
+</form>
+
+<img class="multipleexercise" src="https://buzzrx.s3.amazonaws.com/cda2c660-4446-45d9-9942-734758e1bafd/ExcercisestoPreventBloodClots.png" alt="multiple exercise">
+
+
+<%- include('../partials/footer') %>

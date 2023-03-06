@@ -2,23 +2,24 @@ const mongoose = require('mongoose');
 // Shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
-// const mealsSchema = new Schema ({
-//     name: {
-//         type: String,
-//         required: true
-//     },
-//     food: {
-//         type: String,
-//         required: true
-//     },
-//     water: {
-//         type: Number,
-//         required: true,
-//     }
-//     },
-//     {
-//         timestamps: true
-// });
+const mealsSchema = new Schema ({
+    name: {
+        type: String,
+        required: true
+    },
+    food: {
+        type: String,
+        required: true
+    },
+    water: {
+        type: Number,
+        required: true,
+    }
+    },
+    {
+        timestamps: true
+});
+
 const diarySchema = new Schema ({
 
     weight: {
@@ -48,10 +49,12 @@ const diarySchema = new Schema ({
         type: String,
         required: true
     },
-    food: [{
-        type: Schema.Types.ObjectId,
-        ref:'Meal'
-    }] 
+    name: {
+        type: String,
+        default: 'user',
+        require: true
+    },
+    food: [mealsSchema]
 });
 
 

@@ -1,15 +1,15 @@
 <%- include('../partials/header') %>
 
 <form id="new-form" action="/dailylogs" method="POST">
+    <label>date:</label>
+    <input type="date" name="date">
+    <label>Nickname:</label>
+    <input type="text" name="name">
   <label>Weight:</label>
   <input type="text" name="weight">
   <label>exercise:</label>
   <input type="text" name="exercise">
-  <label>date:</label>
-  <input type="date" name="date">
   <input type="submit" value="Add Dailylog">
-  
-
 </form>
 
 <%- include('../partials/footer') %>

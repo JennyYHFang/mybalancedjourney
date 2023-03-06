@@ -11,11 +11,17 @@ router.get('/home', dailylogsCtrl.home);
 router.get('/new', dailylogsCtrl.new);
 // GET /dailylogs/:id (display a "detail/show" page for a single daily log)
 router.get('/:id', dailylogsCtrl.show);
-// POST /dailylogs (handle the new form being submitted)
 
+router.get('/:id/edit', dailylogsCtrl.edit);
+
+// POST /dailylogs (handle the new form being submitted)
 router.post('/', dailylogsCtrl.create); 
 
-// router.get()
+router.post('/:id/meals', dailylogsCtrl.addToFood)
+// Update
+router.put('/:id/', dailylogsCtrl.update);
+// Delete
 router.delete('/:id', dailylogsCtrl.delete);
+
 
 module.exports = router;
