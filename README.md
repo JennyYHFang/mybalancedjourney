@@ -15,7 +15,7 @@ I wanted to develop a fitness tracker so user can keep track of the exercise and
 
 ![All Meals](.public/images/Meals.png)
 
-![Update Deta](.public/images/Update.png)
+![Update Data](.public/images/Update.png)
 
 # Languages and Tools Used: 
 * HTML5
@@ -27,6 +27,8 @@ I wanted to develop a fitness tracker so user can keep track of the exercise and
 
 # To Get Started
 To access my project: [mybalancedjourney](https://jennyyhfang.github.io/mybalancedjourney/)
+
+Link to Trello Board for Project: [Trello](https://trello.com/b/AiEJnsgt/project-2)
 
 # Future Features
 * Add in exercise plans, videos, and instructions how to use equipments
