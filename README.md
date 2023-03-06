@@ -32,5 +32,5 @@ Link to Trello Board for Project: [Trello](https://trello.com/b/AiEJnsgt/project
 
 # Future Features
 * Add in exercise plans, videos, and instructions how to use equipments
-*Allow other users to share their tips and secrets
+* Allow other users to share their tips and secrets
 * Add calculators and instructions to lose, maintain, or gain weight 
