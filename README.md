@@ -9,13 +9,13 @@ I wanted to develop a fitness tracker so user can keep track of the exercise and
 
 
 # Screenshots
-![MainPage](./public/images/Homepage.png)
+![Main Page](./public/images/Homepage.png)
 
-![AllLogs](.public/images/AllLogs.png)
+![All Logs](./public/images/AllLog.png)
 
-![Meals](.public/images/LogandMeals.png)
+![All Meals](.public/images/Meals.png)
 
-![Update](.public/images/UpdateDetails.png)
+![Update Deta](.public/images/Update.png)
 
 # Languages and Tools Used: 
 * HTML5
