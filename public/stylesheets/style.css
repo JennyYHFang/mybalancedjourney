@@ -103,3 +103,11 @@ td {
   margin-right: auto;
   width: 88%;
 }
+
+#exerciselist {
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-size: 40px;
+}
