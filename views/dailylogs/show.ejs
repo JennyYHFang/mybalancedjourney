@@ -19,16 +19,6 @@
     <input type="submit" value="Add Meal">
 </form>
 
-<div>
-    <% dailylog.food.forEach(function(m) { %>
-        <article class="badge"><%= m.name %> <%= m.food %> <%= m.water %> cups
-        <form action="/meals/<%= m._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="X">
-        </form>
-        </article>
-      <% }) %>
-</div>
-
 <table id="tablelist">
     <thead>
       <tr>
@@ -45,7 +35,6 @@
           <td><%= m.name %></td>
           <td><%= m.food %></td>
           <td><%= m.water %></td>
-          <td><a href="/dailylogs/<%= m._id %>">details</a></td>
           <td><form action="/meals/<%= m._id %>?_method=DELETE" method="POST">
               <input type="submit" value="X">
           </form></td>
