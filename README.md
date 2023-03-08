@@ -7,15 +7,10 @@ I wanted to develop a fitness tracker so user can keep track of the exercise and
 * Application has full CRUD functionality to create, edit, and delete logs and meals.
 * Web Application is fully functional and easy to use. 
 
-
 # Screenshots
 ![Main Page](./public/images/Homepage.png)
 
 ![All Logs](./public/images/AllLog.png)
-
-![All Meals](.public/images/Meals.png)
-
-![Update Data](.public/images/Update.png)
 
 # Languages and Tools Used: 
 * HTML5

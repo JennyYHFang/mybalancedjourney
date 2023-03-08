@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var dailylogsCtrl = require('../controllers/dailylogs');
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // All routes start with '/dailylogs'
 
@@ -8,20 +9,20 @@ var dailylogsCtrl = require('../controllers/dailylogs');
 router.get('/', dailylogsCtrl.index);
 router.get('/home', dailylogsCtrl.home);
 // GET /dailylogs/new (display a form for entering a new daily log)
-router.get('/new', dailylogsCtrl.new);
+router.get('/new', ensureLoggedIn, dailylogsCtrl.new);
 // GET /dailylogs/:id (display a "detail/show" page for a single daily log)
-router.get('/:id', dailylogsCtrl.show);
+router.get('/:id', ensureLoggedIn, dailylogsCtrl.show);
 
-router.get('/:id/edit', dailylogsCtrl.edit);
+router.get('/:id/edit', ensureLoggedIn, dailylogsCtrl.edit);
 
 // POST /dailylogs (handle the new form being submitted)
-router.post('/', dailylogsCtrl.create); 
+router.post('/', ensureLoggedIn, dailylogsCtrl.create); 
 
-router.post('/:id/meals', dailylogsCtrl.addToFood)
+router.post('/:id/meals', ensureLoggedIn, dailylogsCtrl.addToFood)
 // Update
-router.put('/:id/', dailylogsCtrl.update);
+router.put('/:id/', ensureLoggedIn, dailylogsCtrl.update);
 // Delete
-router.delete('/:id', dailylogsCtrl.delete);
+router.delete('/:id', ensureLoggedIn, dailylogsCtrl.delete);
 
 
 module.exports = router;
